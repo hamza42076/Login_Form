@@ -3,37 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Form with Dark/Light Mode</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Register Form with Dark/Light Mode</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body >
+<body>
+
+  <!-- Theme toggle button -->
+  <button id="toggle-theme" class="theme-toggle">Toggle Theme</button>
 
   <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <span id="namespan"></span>
+    <h1>Register Form</h1>
+    <form  onSubmit = "onSubmit(event)">
+      <!-- First Name -->
+      <label for="FirstName">First Name</label>
+      <input type="text" id="FirstName" placeholder="Enter your First Name">
+      <span id="FirstNamespan"></span>
 
+      <!-- Last Name -->
+      <label for="LastName">Last Name</label>
+      <input type="text" id="LastName" placeholder="Enter your Last Name" >
+      <span id="LastNamespan"></span>
+
+      <!-- Email -->
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="text" id="email" placeholder="Enter your email" >
       <span id="emailspan"></span>
 
+      <!-- Number -->
+      <label for="Number">Number</label>
+      <input type="text" id="Number" placeholder="Enter your Number" >
+      <span id="Numberspan"></span>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
-      <span id="passwordspan"></span>
+      <!-- Course -->
+      <label for="course">Course</label>
+      <select id="course" >
+        <option>Select the course</option>
+        <option>Web and App Development</option>
+        <option>Python</option>
+        <option>Flutter</option>
+        <option>Artificial Intelligence</option>
+      </select>
+      <span id="courseSpan"></span>
 
-      <label for="number">number</label>
-      <input type="text" id="number" placeholder="Enter your number" required>
-      <span id="numberspan"></span>
+      <!-- Gender -->
+      <label>Gender</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label>
+      <span id="genderSpan"></span>
 
+      <!-- Submit Button -->
+      <button type="submit" >Submit</button>
 
-      <button type="submit">Submit</button>
-      <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+      <!-- Sign-up Link -->
+      <p class="signup-link">Already have an account? <a href="#">Sign in</a></p>
     </form>
   </div>
 
+  <!-- Theme toggle script -->
   <script src="app.js"></script>
+
 </body>
 </html>
