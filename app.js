@@ -8,6 +8,8 @@ function onSubmit(e) {
 
     if (firstname.length < 3) {
         FirstNamespan.innerText = "Kindly enter your correct name";
+        FirstNamespan.style.color = "red";
+
     } else {
         FirstNamespan.innerText = ""; // Clear error if input is valid
     }
@@ -17,8 +19,11 @@ function onSubmit(e) {
 
     if (LastName.length < 3) {
         LastNamespan.innerText = "Kindly enter your correct name";
+         LastNamespan.style.color = "red";
     } else {
         LastNamespan.innerText = ""; // Clear error if input is valid
+               
+
     }
 // email section
     let email = document.querySelector("#email").value;
@@ -26,6 +31,8 @@ function onSubmit(e) {
     
     if(!email.match(emailRegex)){
         emailSpan.innerText = "Kindly enter a valid email";
+        emailSpan.style.color = "red";
+
 
     }
 // number section
@@ -34,6 +41,8 @@ function onSubmit(e) {
 
     if(number < 11){
         numberSpan.innerText = "Please enter a valid 11-digit number.";
+        numberSpan.style.color = "red";
+
     }
 // couse section
     let course = document.querySelector("#course");
@@ -41,6 +50,8 @@ function onSubmit(e) {
 
     if(course.selectedIndex === 0){
         courseSpan.innerText = "Kindly selected the course";
+        courseSpan.style.color = "red";
+
      }
 
 // radio btn section
@@ -49,6 +60,8 @@ let genderSpan = document.querySelector("#genderSpan");
 
 if(!radio[0].checked && !radio[1].checked){
     genderSpan.innerText = "Kindly selected the gender";
+    genderSpan.style.color = "red";
+
 
 
 }
